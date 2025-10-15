@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Website - Purchase</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+    .payment-total .discount {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.2em;
+    }
+
+    .payment-total .discount span {
+        margin: 0;
+    }
+</style>
 </head>
 <body>
     <div class="container">
@@ -88,7 +99,7 @@
                 
                 <div class="payment-total">
                     <span>Quantity: <span id="quantity">0</span></span>
-                    <span>Discount: R<span id="discount">0.00</span> (<span id="discountPercent">0</span>%)</span>
+                    <span class="discount">Discount: R<span id="discount">0.00</span> (<span id="discountPercent">0</span>%)</span>
                     <span>Total Amount w/VAT: R<span id="total">0.00</span></span>
                 </div>
                 
