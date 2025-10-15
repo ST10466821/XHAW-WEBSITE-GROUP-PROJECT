@@ -80,3 +80,29 @@ The payment section is ready for integration with popular payment processors:
 - [ ] Student dashboard
 - [ ] Instructor portal
 - [ ] Certificate generation
+
+## CHanges Made for Mikestone 3 ##
+- Enhanced purchase.html with dynamic course selection and discount calculation (0%, 5%, 10%, 15% based on course count).
+- Added VAT (15%) to total amount calculations.
+- Improved layout with aligned prices and sleek checkbox placement.
+- Integrated a "Back" button for navigation, positioned at top left.
+- Ensured responsive design compatibility with existing CSS structure.
+
+## References ##
+W3Schools.com (n.d.) HTML Tutorial. W3Schools. Available at: https://www.w3schools.com/html/
+(Accessed: 14 October 2025).
+
+Coyier, C. (n.d.) CSS-Tricks. CSS-Tricks. Available at: https://css-tricks.com/
+(Accessed: 12,13,14,15 October 2025).
+
+Google Developers (n.d.) Web Fundamentals. Google. Available at: https://developers.google.com/web/fundamentals
+(Accessed: 12,13,14,15 October 2025).
+
+Unsplash (n.d.) Life skills course – stock photos. Unsplash. Available at: https://unsplash.com/s/photos/life-skills-course
+(Accessed: 15 October 2025).
+
+xAI (2025) Grok (chatbot). Available at: https://grok.com/
+(Accessed: 13,14 October 2025).
+
+Anthropic (n.d.) Claude (AI chatbot). Available at: https://www.anthropic.com/claude
+(Accessed: 13,14 October 2025).
