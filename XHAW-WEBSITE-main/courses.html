@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Website - Courses</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    .white-text {
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="img/xhaw group logo.JPG" alt="Empowering The Nation Logo" class="logo">
+        </div>
+        
+        <div class="nav">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="courses.html" class="nav-btn active">Courses</a>
+            <a href="why-us.html" class="nav-btn">Why us?</a>
+            <a href="contact.html" class="nav-btn">Contact Us</a>
+            <a href="login.html" class="nav-btn">Log In/Sign Up</a>
+            <a href="purchase.html" class="nav-btn purchase-btn">Purchase</a>
+        </div>
+
+        <!-- Summary Sections -->
+        <div id="six-week-summary" class="course-summary" style="display: none;">
+            <div class="summary-header">6 Week Courses Summary</div>
+            <div class="summary-content">
+                <p>Our 6-week intensive courses are designed for quick skill acquisition and immediate application.</p>
+                <ul>
+                    <li>Duration: 6 weeks each</li>
+                    <li>Format: Hybrid (Online + In-person)</li>
+                    <li>Price Range: R500 - R750</li>
+                    <li>Certificate upon completion</li>
+                </ul>
+                <button onclick="hideSummary()" class="close-summary">View All Courses</button>
+            </div>
+        </div>
+
+        <div id="six-month-summary" class="course-summary" style="display: none;">
+            <div class="summary-header">6 Month Courses Summary</div>
+            <div class="summary-content">
+                <p>Our comprehensive 6-month programs provide in-depth knowledge and extensive hands-on experience. Ideal for career transitions and mastery.</p>
+                <ul>
+                    <li>Duration: 6 months each</li>
+                    <li>Format: Hybrid (Online + In-person)</li>
+                    <li>Price Range: R1,000 - R1,500</li>
+                    <li>Industry certification included</li>
+                    <li>Job placement assistance</li>
+                </ul>
+                <button onclick="hideSummary()" class="close-summary">View All Courses</button>
+            </div>
+        </div>
+        
+        <!-- Main Courses Content -->
+        <div id="main-courses" class="courses-grid">
+            <div class="course-category">
+                <div class="category-header clickable" id="six-week" onclick="showSummary('six-week-summary')">6 Week Courses :</div>
+                
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-title">Child Minding</div>
+                        <div class="course-details">
+                            <span class="course-duration">Duration: 6 weeks</span>
+                            <span class="course-price">Price: R750</span>
+                        </div>
+                        <div class="course-description">Basic care needs for babies and toddlers.</div>
+                        <ul style="margin: 0; padding-left: 20px;font-size: 13px;">
+                         <li class="white-text">Birth to six-month old baby needs</li>
+                        <li class="white-text">Toddler needs</li>
+                        <li class="white-text">Educational toys</li>
+                    </ul>
+                    </div>
+                    <div class="course-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1681842149009-a040e02cadf2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpbGQlMjBtaW5kaW5nfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=900" alt="Child Minding">
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-title">Cooking</div>
+                        <div class="course-details">
+                            <span class="course-duration">Duration: 6 weeks</span>
+                            <span class="course-price">Price: R750</span>
+                        </div>
+                        <div class="course-description">Learn the fundamentals of cooking, including meal preparation and nutrition.</div>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 13px;">
+                        <li class="white-text">Meal planning and preparation</li>
+                        <li class="white-text">Nutritional guidelines</li>
+                        <li class="white-text">Food safety and hygiene</li>
+                    </ul>
+                    </div>
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1653233797467-1a528819fd4f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29va2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=900" alt="Cooking">
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-title">Garden Maintenance</div>
+                        <div class="course-details">
+                            <span class="course-duration">Duration: 6 weeks</span>
+                            <span class="course-price">Price: R500</span>
+                        </div>
+                        <div class="course-description">Learn how to maintain a beautiful garden, including planting, pruning, and landscaping.</div>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 13px;">
+                        <li class="white-text">Planting techniques</li>
+                        <li class="white-text">Pruning and trimming</li>
+                        <li class="white-text">Soil health and composting</li>
+                    </ul>
+                    </div>
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1759496607068-f2892afdaf23?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGdhcmRlbiUyMG1haW50ZW5hbmNlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=900" alt="Garden Maintenance">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="course-category">
+                <div class="category-header clickable" id="six-month" onclick="showSummary('six-month-summary')">6 Month Courses :</div>
+                
+                <div class="course-grid-6month">
+                    <div class="course-card-6month">
+                        <div class="course-title-6month">First Aid</div>
+                        <div class="course-content-6month">
+                            <div class="course-info-6month">
+                                <div class="course-details-6month">
+                                    <span class="course-duration">Duration: 6 months</span>
+                                    <span class="course-price">Price: R1,500</span>
+                                </div>
+                                <div class="course-description">Learn essential first aid skills and techniques.</div>
+                                <ul style="margin: 0; padding-left: 20px; font-size: 13px;">
+                        <li class="white-text">Wounds and Bleeding</li>
+                        <li class="white-text">CPR and Resuscitation</li>
+                        <li class="white-text">Emergency scene management</li>
+                    </ul>
+                            </div>
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1624638764471-cffef5035746?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZpcnN0JTIwYWlkfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=900" alt="First Aid">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card-6month">
+                        <div class="course-title-6month">Sewing</div>
+                        <div class="course-content-6month">
+                            <div class="course-info-6month">
+                                <div class="course-details-6month">
+                                    <span class="course-duration">Duration: 6 months</span>
+                                    <span class="course-price">Price: R1,500</span>
+                                </div>
+                                <div class="course-description">Learn the art of sewing, from basic stitches to advanced techniques.</div>
+                                <ul style="margin: 0; padding-left: 20px; font-size: 13px;">
+                                    <li class="white-text">Hand sewing techniques</li>
+                                    <li class="white-text">Machine sewing basics</li>
+                                    <li class="white-text">Fabric types and selection</li>
+                                    <li class="white-text">Pattern reading and cutting</li>
+                                </ul>   
+                            </div>
+                            <div class="course-image">
+                                <img src="https://media.istockphoto.com/id/1401228001/photo/seamstress-working-on-sewing-machine.webp?a=1&b=1&s=612x612&w=0&k=20&c=i80Cvtad6ACjDbMApAHjx4NJ8JyvTcB4_79wMYV2mXA=" alt="Sewing">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card-6month">
+                        <div class="course-title-6month">Landscaping</div>
+                        <div class="course-content-6month">
+                            <div class="course-info-6month">
+                                <div class="course-details-6month">
+                                    <span class="course-duration">Duration: 6 months</span>
+                                    <span class="course-price">Price: R1,500</span>
+                                </div>
+                                <div class="course-description">Learn the fundamentals of landscaping, including design principles and plant selection.</div>
+                                <ul style="margin: 0; padding-left: 20px; font-size: 13px;">
+                                    <li class="white-text">Site analysis and planning</li>
+                                    <li class="white-text">Planting techniques</li>
+                                    <li class="white-text">Garden Layout</li>
+                                </ul>
+                            </div>
+                            <div class="course-image">
+                                <img src="https://plus.unsplash.com/premium_photo-1678278690615-cd6323309c9c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGxhbmRzY2FwaW5nfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=900" alt="Landscaping">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card-6month">
+                        <div class="course-title-6month">Life Skills</div>
+                        <div class="course-content-6month">
+                            <div class="course-info-6month">
+                                <div class="course-details-6month">
+                                    <span class="course-duration">Duration: 6 months</span>
+                                    <span class="course-price">Price: R1,500</span>
+                                </div>
+                                <div class="course-description">Master essential life skills for daily success.</div>
+                                 <ul style="margin: 0; padding-left: 20px; font-size: 13px;">
+                                    <li class="white-text">Opening a Bank Account</li>
+                                    <li class="white-text">Basic Labour Law</li>
+                                    <li class="white-text">Basic reading and writing literacy</li>
+                                </ul>
+                            </div>
+                            <div class="course-image">
+                                <img src="https://media.istockphoto.com/id/469066852/photo/diverse-mid-adult-students-using-computers-during-class-in-college.webp?a=1&b=1&s=612x612&w=0&k=20&c=Bj9BdpeoJTUfGVqT9KjMBevy1sFT_rRctzxHyR8EnTA=" alt="Life Skills">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSummary(summaryId) {
+            document.getElementById('main-courses').style.display = 'none';
+            document.getElementById(summaryId).style.display = 'block';
+        }
+
+        function hideSummary() {
+            document.getElementById('main-courses').style.display = 'flex';
+            document.getElementById('six-week-summary').style.display = 'none';
+            document.getElementById('six-month-summary').style.display = 'none';
+        }
+
+        // Check for hash on page load
+        window.onload = function() {
+            if (window.location.hash === '#six-week') {
+                showSummary('six-week-summary');
+            } else if (window.location.hash === '#six-month') {
+                showSummary('six-month-summary');
+            }
+        }
+    </script>
+</body>
+</html>

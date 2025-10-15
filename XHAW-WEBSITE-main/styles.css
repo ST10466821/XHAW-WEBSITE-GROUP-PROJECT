@@ -1,0 +1,690 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2a2a2a;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #d3d3d3;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ============================================
+   HEADER STYLES - NEW/UPDATED
+   ============================================ */
+.header {
+    background-color: #888;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NEW: Logo styling */
+.logo {
+    max-width: 400px;
+    height: auto;
+    display: block;
+}
+
+/* ============================================
+   NAVIGATION STYLES - UPDATED
+   ============================================ */
+.nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    gap: 3px; /* NEW: Added gap between buttons */
+}
+
+.nav-btn {
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* UPDATED: Increased padding */
+    cursor: pointer;
+    flex: 1;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease; /* NEW: Smooth transitions */
+    font-weight: 500; /* NEW: Slightly bolder text */
+}
+
+.nav-btn:hover, .nav-btn.active {
+    background-color: #555;
+    transform: translateY(-2px); /* NEW: Subtle lift effect on hover */
+}
+
+.purchase-btn {
+    background-color: #555 !important;
+    font-weight: 600; /* NEW: Make purchase button stand out more */
+}
+
+/* ============================================
+   HOME PAGE STYLES
+   ============================================ */
+.mission-section {
+    background-color: #777;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+    border-radius: 5px; /* NEW: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* NEW: Subtle shadow */
+}
+
+.courses-grid {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.course-category {
+    flex: 1;
+}
+
+.category-header {
+    background-color: #777;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px; /* NEW: Rounded corners */
+}
+
+.category-header.clickable {
+    cursor: pointer;
+    transition: all 0.3s ease; /* NEW: Smooth transition */
+}
+
+.category-header.clickable:hover {
+    background-color: #666;
+    transform: scale(1.02); /* NEW: Slight scale on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* NEW: Shadow on hover */
+}
+
+/* ============================================
+   COURSE SUMMARY STYLES - UPDATED
+   ============================================ */
+.course-summary {
+    background-color: #777;
+    color: white;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 8px; /* NEW: Rounded corners */
+    animation: fadeIn 0.5s ease; /* NEW: Fade in animation */
+}
+
+/* NEW: Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.summary-header {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #888; /* NEW: Underline effect */
+    padding-bottom: 15px; /* NEW: Spacing */
+}
+
+.summary-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.summary-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.summary-content ul {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+.summary-content li {
+    background-color: #666;
+    padding: 12px 15px; /* UPDATED: Increased padding */
+    margin-bottom: 10px; /* UPDATED: Increased spacing */
+    border-left: 4px solid #888;
+    transition: all 0.3s ease; /* NEW: Smooth transition */
+}
+
+/* NEW: List item hover effect */
+.summary-content li:hover {
+    background-color: #555;
+    border-left-color: #999;
+    padding-left: 20px;
+}
+
+.close-summary {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 12px 30px; /* UPDATED: Increased padding */
+    cursor: pointer;
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px; /* NEW: Rounded corners */
+    transition: all 0.3s ease; /* NEW: Smooth transition */
+}
+
+.close-summary:hover {
+    background-color: #444;
+    transform: translateY(-2px); /* NEW: Lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* NEW: Shadow on hover */
+}
+
+/* ============================================
+   6 WEEK COURSE CARD STYLES - UPDATED
+   ============================================ */
+.course-card {
+    background-color: #666;
+    margin-bottom: 20px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    border-radius: 5px; /* NEW: Rounded corners */
+    transition: all 0.3s ease; /* NEW: Smooth transition */
+}
+
+/* NEW: Card hover effect */
+.course-card:hover {
+    background-color: #5a5a5a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.course-info {
+    flex: 1;
+}
+
+.course-title {
+    background-color: #f0f0f0;
+    padding: 10px; /* UPDATED: Increased padding */
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    border-radius: 3px; /* NEW: Rounded corners */
+}
+
+.course-details {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.course-duration, .course-price {
+    background-color: #f0f0f0;
+    padding: 6px 10px; /* UPDATED: Better padding */
+    font-size: 12px;
+    color: #333;
+    border-radius: 3px; /* NEW: Rounded corners */
+    font-weight: 600; /* NEW: Bolder text */
+}
+
+.course-price {
+    background-color: #e0e0e0; /* NEW: Different background for price */
+    color: #2a5d2a; /* NEW: Green-ish color for price */
+}
+
+.course-description {
+    background-color: #888;
+    color: white;
+    padding: 10px; /* UPDATED: Increased padding */
+    font-size: 13px;
+    line-height: 1.5; /* UPDATED: Better line height */
+    border-radius: 3px; /* NEW: Rounded corners */
+}
+
+/* UPDATED: Course image container */
+.course-image {
+    width: 120px;
+    height: 90px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    flex-shrink: 0;
+    border-radius: 5px; /* NEW: Rounded corners */
+    overflow: hidden; /* NEW: Contain images properly */
+    border: 2px solid #ddd; /* NEW: Border around images */
+}
+
+/* NEW: Image styling inside course-image */
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ============================================
+   6 MONTH COURSE GRID STYLES - UPDATED
+   ============================================ */
+.course-grid-6month {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.course-card-6month {
+    background-color: #666;
+    padding: 15px;
+    border-radius: 5px; /* NEW: Rounded corners */
+    transition: all 0.3s ease; /* NEW: Smooth transition */
+}
+
+/* NEW: 6 month card hover effect */
+.course-card-6month:hover {
+    background-color: #5a5a5a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.course-title-6month {
+    background-color: #f0f0f0;
+    padding: 10px; /* UPDATED: Increased padding */
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    border-radius: 3px; /* NEW: Rounded corners */
+}
+
+.course-content-6month {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.course-info-6month {
+    flex: 1;
+}
+
+.course-details-6month {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* UPDATED: Increased gap */
+    margin-bottom: 10px;
+}
+
+.course-details-6month .course-duration,
+.course-details-6month .course-price {
+    background-color: #f0f0f0;
+    padding: 6px 10px; /* UPDATED: Better padding */
+    font-size: 12px;
+    color: #333;
+    border-radius: 3px; /* NEW: Rounded corners */
+    font-weight: 600; /* NEW: Bolder text */
+}
+
+.course-details-6month .course-price {
+    background-color: #e0e0e0; /* NEW: Different background */
+    color: #2a5d2a; /* NEW: Green-ish color */
+}
+
+.course-content-6month .course-image {
+    width: 100px;
+    height: 70px;
+}
+
+.course-content-6month .course-description {
+    background-color: #888;
+    color: white;
+    padding: 10px; /* UPDATED: Increased padding */
+    font-size: 12px;
+    line-height: 1.4; /* UPDATED: Better line height */
+    border-radius: 3px; /* NEW: Rounded corners */
+}
+
+/* ============================================
+   PURCHASE PAGE STYLES - UPDATED
+   ============================================ */
+.purchase-form {
+    display: flex;
+    gap: 40px;
+}
+
+.purchase-left {
+    flex: 1;
+}
+
+.contact-details {
+    background-color: #777;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px; /* NEW: Rounded corners */
+}
+
+.purchase-form input {
+    width: 100%;
+    padding: 12px; /* UPDATED: Increased padding */
+    margin-bottom: 15px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 3px; /* NEW: Rounded corners */
+    transition: all 0.3s ease; /* NEW: Smooth transition */
+}
+
+/* NEW: Input focus effect */
+.purchase-form input:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #888;
+}
+
+.purchase-right {
+    flex: 1;
+}
+
+.payment-header {
+    background-color: #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    border-radius: 5px; /* NEW: Rounded corners */
+    font-weight: 600; /* NEW: Bolder text */
+}
+
+.payment-item {
+    background-color: #f0f0f0;
+    padding: 12px; /* UPDATED: Increased padding */
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px; /* NEW: Rounded corners */
+    transition: all 0.3s ease; /* NEW: Smooth transition */
+}
+
+/* NEW: Payment item hover effect */
+.payment-item:hover {
+    background-color: #e8e8e8;
+    padding-left: 15px;
+}
+
+.payment-total {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin-top: 20px;
+    border-radius: 5px; /* NEW: Rounded corners */
+    font-weight: 600; /* NEW: Bolder text */
+}
+
+.purchase-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 15px 40px; /* UPDATED: Increased padding */
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 5px; /* NEW: Rounded corners */
+    transition: all 0.3s ease; /* NEW: Smooth transition */
+    font-weight: 600; /* NEW: Bolder text */
+}
+
+.purchase-button:hover {
+    background-color: #444;
+    transform: translateY(-2px); /* NEW: Lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* NEW: Shadow */
+}
+
+/* ============================================
+   CONTACT PAGE STYLES
+   ============================================ */
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info div {
+    margin-bottom: 15px;
+    line-height: 1.6; /* NEW: Better line height */
+}
+
+.maps-placeholder {
+    background-color: #f0f0f0;
+    height: 300px; /* UPDATED: Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    margin-top: 20px;
+    border-radius: 5px; /* NEW: Rounded corners */
+    border: 2px solid #ddd; /* NEW: Border */
+    font-size: 14px; /* NEW: Font size */
+}
+
+/* ============================================
+   WHY US PAGE STYLES - UPDATED
+   ============================================ */
+.why-us-content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.why-us-section {
+    background-color: #777;
+    color: white;
+    padding: 40px; /* UPDATED: Increased padding */
+    margin-bottom: 30px;
+    border-radius: 8px; /* NEW: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* NEW: Subtle shadow */
+}
+
+.why-us-section h2 {
+    margin-bottom: 15px; /* NEW: Spacing */
+    font-size: 28px; /* NEW: Larger heading */
+}
+
+.why-us-section p {
+    font-size: 16px; /* NEW: Font size */
+    line-height: 1.6; /* NEW: Line height */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* UPDATED: Better responsive */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-box {
+    background-color: #888;
+    color: white;
+    padding: 35px; /* UPDATED: Increased padding */
+    text-align: center;
+    border-radius: 8px; /* NEW: Rounded corners */
+    transition: all 0.3s ease; /* NEW: Smooth transition */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* NEW: Subtle shadow */
+}
+
+/* NEW: Feature box hover effect */
+.feature-box:hover {
+    background-color: #777;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.feature-box h3 {
+    margin-bottom: 15px; /* NEW: Spacing */
+    font-size: 20px; /* NEW: Font size */
+    border-bottom: 2px solid #999; /* NEW: Underline */
+    padding-bottom: 10px; /* NEW: Padding */
+}
+
+.feature-box p {
+    font-size: 14px; /* NEW: Font size */
+    line-height: 1.6; /* NEW: Line height */
+}
+
+/* ============================================
+   LOGIN PAGE STYLES - UPDATED
+   ============================================ */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.login-form {
+    background-color: #777;
+    color: white;
+    padding: 50px; /* UPDATED: Increased padding */
+    width: 400px;
+    text-align: center;
+    border-radius: 8px; /* NEW: Rounded corners */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* NEW: Shadow */
+}
+
+.login-form h2 {
+    margin-bottom: 30px;
+    font-size: 24px; /* NEW: Font size */
+}
+
+.login-form input {
+    width: 100%;
+    padding: 14px; /* UPDATED: Increased padding */
+    margin-bottom: 15px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px; /* NEW: Rounded corners */
+    transition: all 0.3s ease; /* NEW: Smooth transition */
+}
+
+/* NEW: Login input focus effect */
+.login-form input:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #888;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 14px; /* UPDATED: Increased padding */
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px; /* NEW: Rounded corners */
+    transition: all 0.3s ease; /* NEW: Smooth transition */
+    font-weight: 600; /* NEW: Bolder text */
+}
+
+.login-form button:hover {
+    background-color: #444;
+    transform: translateY(-2px); /* NEW: Lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* NEW: Shadow */
+}
+
+.login-form a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease; /* NEW: Smooth transition */
+}
+
+/* NEW: Link hover effect */
+.login-form a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - NEW
+   ============================================ */
+@media (max-width: 768px) {
+    .courses-grid {
+        flex-direction: column;
+    }
+    
+    .purchase-form {
+        flex-direction: column;
+    }
+    
+    .course-grid-6month {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+    }
+    
+    .nav-btn {
+        flex: 1 1 45%;
+    }
+    
+    .logo {
+        max-width: 100%;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY IMPROVEMENTS - NEW
+   ============================================ */
+/* Better focus indicators for keyboard navigation */
+button:focus,
+a:focus,
+input:focus {
+    outline: 2px solid #888;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .nav-btn,
+    .category-header,
+    .course-card {
+        border: 2px solid #000;
+    }
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
