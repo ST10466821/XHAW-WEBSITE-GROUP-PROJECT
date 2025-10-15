@@ -2,7 +2,7 @@ Sergio Florenca XHAW Group 2 Group (S&P)(Sergio,Joshua,Philip)
 ST10466821
 
 ### GitHub Link
-https://github.com/ST10466821/XHAW-WEBSITE.git
+https://github.com/ST10466821/XHAW-WEBSITE-GROUP-PROJECT.git
 
 
 # Course Website
