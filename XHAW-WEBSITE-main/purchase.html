@@ -23,20 +23,15 @@
         
         <div class="purchase-form">
             <div class="purchase-left">
-                <div class="contact-details">
-                    User Contact Details :
-                </div>
-                
+                <div class="contact-details">User Contact Details :</div>
                 <div>
                     <div>Name :</div>
                     <input type="text" placeholder="Enter your name">
                 </div>
-                
                 <div>
                     <div>Email Address :</div>
                     <input type="email" placeholder="Enter your email">
                 </div>
-                
                 <div>
                     <div>Phone Number :</div>
                     <input type="tel" placeholder="Enter your phone number">
@@ -47,56 +42,113 @@
                 <div class="payment-header">Payment</div>
                 
                 <div class="payment-item">
-                    <span>Name Of Course :</span>
-                    <span>Price :</span>
+                    <span>Basic Child Care</span>
+                    <span class="price">$49.99</span>
+                    <span><input type="checkbox" id="course1" name="courses" value="49.99" onchange="calculateTotal()"></span>
                 </div>
                 
                 <div class="payment-item">
-                    <span>Name Of Course :</span>
-                    <span>Price :</span>
+                    <span>Cooking Fundamentals</span>
+                    <span class="price">$49.99</span>
+                    <span><input type="checkbox" id="course2" name="courses" value="49.99" onchange="calculateTotal()"></span>
                 </div>
                 
                 <div class="payment-item">
-                    <span>Name Of Course :</span>
-                    <span>Price :</span>
+                    <span>Meal Planning</span>
+                    <span class="price">$49.99</span>
+                    <span><input type="checkbox" id="course3" name="courses" value="49.99" onchange="calculateTotal()"></span>
                 </div>
                 
                 <div class="payment-item">
-                    <span>Name Of Course :</span>
-                    <span>Price :</span>
+                    <span>Nutritional Basics</span>
+                    <span class="price">$49.99</span>
+                    <span><input type="checkbox" id="course4" name="courses" value="49.99" onchange="calculateTotal()"></span>
                 </div>
                 
                 <div class="payment-item">
-                    <span>Name Of Course :</span>
-                    <span>Price :</span>
+                    <span>Toddler Education</span>
+                    <span class="price">$49.99</span>
+                    <span><input type="checkbox" id="course5" name="courses" value="49.99" onchange="calculateTotal()"></span>
                 </div>
                 
                 <div class="payment-item">
-                    <span>Name Of Course :</span>
-                    <span>Price :</span>
+                    <span>Life Skills 101</span>
+                    <span class="price">$49.99</span>
+                    <span><input type="checkbox" id="course6" name="courses" value="49.99" onchange="calculateTotal()"></span>
                 </div>
                 
                 <div class="payment-item">
-                    <span>Name Of Course :</span>
-                    <span>Price :</span>
-                </div>
-                
-                <div class="payment-item">
-                    <span>Name Of Course :</span>
-                    <span>Price :</span>
+                    <span>Family Wellness</span>
+                    <span class="price">$49.99</span>
+                    <span><input type="checkbox" id="course7" name="courses" value="49.99" onchange="calculateTotal()"></span>
                 </div>
                 
                 <div class="payment-total">
-                    <span>Quantity :</span>
-                    <span>Discounts :</span>
-                    <span>Total Amount w/VAT :</span>
+                    <span>Quantity: <span id="quantity">0</span></span>
+                    <span>Discount: $<span id="discount">0.00</span> (<span id="discountPercent">0</span>%)</span>
+                    <span>Total Amount w/VAT: $<span id="total">0.00</span></span>
                 </div>
                 
                 <div style="text-align: center;">
-                    <button class="purchase-button">Complete Purchase</button>
+                    <button class="purchase-button" onclick="validateAndSubmit()">Complete Purchase</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        function calculateTotal() {
+            const courses = document.getElementsByName("courses");
+            let subtotal = 0;
+            let selectedCount = 0;
+
+            for (let course of courses) {
+                if (course.checked) {
+                    subtotal += parseFloat(course.value);
+                    selectedCount++;
+                }
+            }
+
+            let discountPercent = 0;
+            if (selectedCount === 2) discountPercent = 5;
+            else if (selectedCount === 3) discountPercent = 10;
+            else if (selectedCount > 3) discountPercent = 15;
+
+            const discountAmount = subtotal * (discountPercent / 100);
+            const totalBeforeVat = subtotal - discountAmount;
+            const vatRate = 0.15; // 15% VAT
+            const vatAmount = totalBeforeVat * vatRate;
+            const total = totalBeforeVat + vatAmount;
+
+            document.getElementById("quantity").textContent = selectedCount;
+            document.getElementById("discount").textContent = discountAmount.toFixed(2);
+            document.getElementById("discountPercent").textContent = discountPercent;
+            document.getElementById("total").textContent = total.toFixed(2);
+        }
+
+        function validateAndSubmit() {
+            const name = document.querySelector('input[type="text"]').value;
+            const email = document.querySelector('input[type="email"]').value;
+            const phone = document.querySelector('input[type="tel"]').value;
+            const courses = document.getElementsByName("courses");
+            let selectedCount = 0;
+
+            for (let course of courses) {
+                if (course.checked) selectedCount++;
+            }
+
+            if (!name || !email || !phone) {
+                alert("Please fill in all contact details.");
+                return;
+            }
+
+            if (selectedCount === 0) {
+                alert("Please select at least one course.");
+                return;
+            }
+
+            alert("Purchase completed! Thank you, " + name + "!");
+        }
+    </script>
 </body>
 </html>
